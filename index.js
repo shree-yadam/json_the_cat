@@ -9,9 +9,9 @@ const getUserInput = function() {
   fetchBreedDescription(breedName, (error, desc) => {
     if (error) {
       console.log(`Error (${error.message})`);
-    } else {
-      console.log(desc);
+      process.exit();
     }
+    console.log(desc);
   });
 };
 
